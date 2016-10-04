@@ -1,67 +1,67 @@
-//2012136020_±èµ¿¿ì
+#2012136020_ê¹€ë™ìš°
 
 # ~/.bashrc: executed by bash(1) for non-login shells.
-// ~/.bashrc : ºñ·Î±×ÀÎ½©µéÀ» À§ÇØ bash(1)ÀÌ ½ÇÇàµÈ´Ù.
+# ~/.bashrc : ë¹„ë¡œê·¸ì¸ì‰˜ë“¤ì„ ìœ„í•´ bash(1)ì´ ì‹¤í–‰ëœë‹¤.
 
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
-// /usr/share/doc/bash/examples/startup-files(bash-doc ÆĞÅ°Áö ¾È¿¡ÀÖ´Â)À» º¸¾Æ¶ó.
+# /usr/share/doc/bash/examples/startup-files(bash-doc íŒ¨í‚¤ì§€ ì•ˆì—ìˆëŠ”)ì„ ë³´ì•„ë¼.
 
 # for examples
-// ¿¹¸¦ µé¸é
+# ì˜ˆë¥¼ ë“¤ë©´
 
 # If not running interactively, don't do anything
-// »óÈ£ÀÛ¿ëÀûÀ¸·Î ½ÇÇàµÇÁö ¾ÊÀ¸¸é, ¾Æ¹«°Íµµ ÇÏÁö ¸¶¶ó.
+# ìƒí˜¸ì‘ìš©ì ìœ¼ë¡œ ì‹¤í–‰ë˜ì§€ ì•Šìœ¼ë©´, ì•„ë¬´ê²ƒë„ í•˜ì§€ ë§ˆë¼.
 case $- in
     *i*) ;;
       *) return;;
 esac
 
 # don't put duplicate lines or lines starting with space in the history.
-// È÷½ºÅä¸® ¾È¿¡ Áßº¹¶óÀÎ È¤Àº °ø¹éÀ¸·Î ½ÃÀÛÇÏ´Â ¶óÀÎÀ» ³ÖÁö ¸¶¶ó.
+# íˆìŠ¤í† ë¦¬ ì•ˆì— ì¤‘ë³µë¼ì¸ í˜¹ì€ ê³µë°±ìœ¼ë¡œ ì‹œì‘í•˜ëŠ” ë¼ì¸ì„ ë„£ì§€ ë§ˆë¼.
 
 # See bash(1) for more options
-// ´õ ¸¹Àº ¿É¼ÇÀ» À§ÇØ bash(1)À» º¸¾Æ¶ó.
+# ë” ë§ì€ ì˜µì…˜ì„ ìœ„í•´ bash(1)ì„ ë³´ì•„ë¼.
 
 HISTCONTROL=ignoreboth
 
 # append to the history file, don't overwrite it
-// È÷½ºÅä¸® ÆÄÀÏÀ» µ¤¾î¾²Áö¸»°í, Ãß°¡ÇØ¶ó.
+# íˆìŠ¤í† ë¦¬ íŒŒì¼ì„ ë®ì–´ì“°ì§€ë§ê³ , ì¶”ê°€í•´ë¼.
 
 shopt -s histappend
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-// È÷½ºÅä¸® ±æÀÌ¼³Á¤À» À§ÇØ, bash(1)¾ÈÀÇ HISTSIZE ¿Í HISTFILESIZE¸¦ º¸¾Æ¶ó.
+# íˆìŠ¤í† ë¦¬ ê¸¸ì´ì„¤ì •ì„ ìœ„í•´, bash(1)ì•ˆì˜ HISTSIZE ì™€ HISTFILESIZEë¥¼ ë³´ì•„ë¼.
 
 HISTSIZE=1000
 HISTFILESIZE=2000
 
 # check the window size after each command and, if necessary,
-// °¢ ¸í·É¾î ´ÙÀ½ À©µµ¿ì »çÀÌÁî¸¦ È®ÀÎÇÏ°í, ÇÊ¿äÇÏ¸é,
+# ê° ëª…ë ¹ì–´ ë‹¤ìŒ ìœˆë„ìš° ì‚¬ì´ì¦ˆë¥¼ í™•ì¸í•˜ê³ , í•„ìš”í•˜ë©´,
 # update the values of LINES and COLUMNS.
-// Çà°ú ¿­ÀÇ °ªÀ» ¾÷µ¥ÀÌÆ® ÇÏ¶ó.
+# í–‰ê³¼ ì—´ì˜ ê°’ì„ ì—…ë°ì´íŠ¸ í•˜ë¼.
 
 shopt -s checkwinsize
 
 # If set, the pattern "**" used in a pathname expansion context will
 # match all files and zero or more directories and subdirectories.
-// ¼³Á¤µÇ¾ú´Ù¸é, °æ·Î ÀÌ¸§ È®Àå ¹®¸Æ¿¡ »ç¿ëµÇ´Â  "**" ÆĞÅÏÀº
-// ¸ğµçÆÄÀÏ, 0°³ È¤Àº ±× ÀÌ»óÀÇ µğ·ºÅä¸®µé°ú ¼­ºêµğ·ºÅä¸®°¡ ÀÏÄ¡ÇÒ °ÍÀÌ´Ù.
+# ì„¤ì •ë˜ì—ˆë‹¤ë©´, ê²½ë¡œ ì´ë¦„ í™•ì¥ ë¬¸ë§¥ì— ì‚¬ìš©ë˜ëŠ”  "**" íŒ¨í„´ì€
+# ëª¨ë“ íŒŒì¼, 0ê°œ í˜¹ì€ ê·¸ ì´ìƒì˜ ë””ë ‰í† ë¦¬ë“¤ê³¼ ì„œë¸Œë””ë ‰í† ë¦¬ê°€ ì¼ì¹˜í•  ê²ƒì´ë‹¤.
 
 #shopt -s globstar
 
 # make less more friendly for non-text input files, see lesspipe(1)
-// ºñ-ÅØ½ºÆ® ÀÔ·Â ÆÄÀÏµéÀ» À§ÇØ less¿Í Á»´õ Ä£ÇØÁ®¶ó, lesspile(1)À» º¸¾Æ¶ó.
+# ë¹„-í…ìŠ¤íŠ¸ ì…ë ¥ íŒŒì¼ë“¤ì„ ìœ„í•´ lessì™€ ì¢€ë” ì¹œí•´ì ¸ë¼, lesspile(1)ì„ ë³´ì•„ë¼.
 
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
 # set variable identifying the chroot you work in (used in the prompt below)
-// (ÇÁ·ÒÇÁÆ® ¾Æ·¡¿¡¼­) ÀÛ¾÷ÇÏ°í ÀÖ´Â chroot¸¦ ½Äº°ÇÏ´Â º¯¼ö¸¦ ¼³Á¤ÇÏ¶ó
+# (í”„ë¡¬í”„íŠ¸ ì•„ë˜ì—ì„œ) ì‘ì—…í•˜ê³  ìˆëŠ” chrootë¥¼ ì‹ë³„í•˜ëŠ” ë³€ìˆ˜ë¥¼ ì„¤ì •í•˜ë¼
 if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
     debian_chroot=$(cat /etc/debian_chroot)
 fi
 
 # set a fancy prompt (non-color, unless we know we "want" color)
-// »ó»óÇÏ°í ÀÖ´Â ÇÁ·ÒÇÁÆ®¸¦ Á¤ÇÏ¶ó. (non-color, ¿ì¸®°¡ ¿øÇÏ´Â »öÀ» ¾ËÁö ¸øÇÑ´Ù¸é)
+# ìƒìƒí•˜ê³  ìˆëŠ” í”„ë¡¬í”„íŠ¸ë¥¼ ì •í•˜ë¼. (non-color, ìš°ë¦¬ê°€ ì›í•˜ëŠ” ìƒ‰ì„ ì•Œì§€ ëª»í•œë‹¤ë©´)
 case "$TERM" in
     xterm-color|*-256color) color_prompt=yes;;
 esac
@@ -69,21 +69,21 @@ esac
 # uncomment for a colored prompt, if the terminal has the capability; turned
 # off by default to not distract the user: the focus in a terminal window
 # should be on the output of commands, not on the prompt
-// ÅÍ¹Ì³ÎÀ» »ç¿ëÇÒ ´É·ÂÀÌ µÈ´Ù¸é, »ö»ó ÇÁ·ÒÇÁÆ®¿¡ ´ëÇÑ ÄÚ¸àÆ®¸¦ ÇÏÁö¸¶¶ó.
-// À¯Àú¿¡°Ô È¥¶õÀ» ÁÖÁö ¾Ê±â À§ÇØ ±âº» °ªÀ¸·Î ÇØ¶ó. :
-// ÅÍ¹Ì³Î À©µµ¿ì¿¡¼­ÀÇ ÃÊÁ¡Àº ÇÁ·ÒÇÁÆ®°¡ ¾Æ´Ñ °á°ú¹°¿¡ ÀÖ¾î¾ß ÇÑ´Ù.
+# í„°ë¯¸ë„ì„ ì‚¬ìš©í•  ëŠ¥ë ¥ì´ ëœë‹¤ë©´, ìƒ‰ìƒ í”„ë¡¬í”„íŠ¸ì— ëŒ€í•œ ì½”ë©˜íŠ¸ë¥¼ í•˜ì§€ë§ˆë¼.
+# ìœ ì €ì—ê²Œ í˜¼ë€ì„ ì£¼ì§€ ì•Šê¸° ìœ„í•´ ê¸°ë³¸ ê°’ìœ¼ë¡œ í•´ë¼. :
+# í„°ë¯¸ë„ ìœˆë„ìš°ì—ì„œì˜ ì´ˆì ì€ í”„ë¡¬í”„íŠ¸ê°€ ì•„ë‹Œ ê²°ê³¼ë¬¼ì— ìˆì–´ì•¼ í•œë‹¤.
   
 #force_color_prompt=yes
 
 if [ -n "$force_color_prompt" ]; then
     if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
 	# We have color support; assume it's compliant with Ecma-48
-	// »ö»óÀ» Áö¿øÇÑ´Ù. Ecma-48¸¦ µû¸¥´Ù°í °¡Á¤ÇÏ¶ó.
+	// ìƒ‰ìƒì„ ì§€ì›í•œë‹¤. Ecma-48ë¥¼ ë”°ë¥¸ë‹¤ê³  ê°€ì •í•˜ë¼.
 
 	# (ISO/IEC-6429). (Lack of such support is extremely rare, and such
 	# a case would tend to support setf rather than setaf.)
-	// ±×·¯ÇÑ Áö¿øÀÇ ºÎÁ·Àº ±Øµµ·Î µå¹°°í,
-	// ¿©·¯ °æ¿ì´Â setfº¸´Ù setaf¸¦ Áö¿øÇÏ´Â °æÇâÀÌ ÀÖ´Ù.
+	// ê·¸ëŸ¬í•œ ì§€ì›ì˜ ë¶€ì¡±ì€ ê·¹ë„ë¡œ ë“œë¬¼ê³ ,
+	// ì—¬ëŸ¬ ê²½ìš°ëŠ” setfë³´ë‹¤ setafë¥¼ ì§€ì›í•˜ëŠ” ê²½í–¥ì´ ìˆë‹¤.
 
 	color_prompt=yes
     else
@@ -99,7 +99,7 @@ fi
 unset color_prompt force_color_prompt
 
 # If this is an xterm set the title to user@host:dir
-// xterm ¼³Á¤ ÀÎ °æ¿ì user@host:dir·Î Á¦¸ñÀ» ¼³Á¤ÇÑ´Ù.
+# xterm ì„¤ì • ì¸ ê²½ìš° user@host:dirë¡œ ì œëª©ì„ ì„¤ì •í•œë‹¤.
 
 case "$TERM" in
 xterm*|rxvt*)
@@ -110,7 +110,7 @@ xterm*|rxvt*)
 esac
 
 # enable color support of ls and also add handy aliases
-// lsÀÇ »ö Áö¿øÀ» °¡´ÉÇÏ°Ô ÇÏ°í, ¶ÇÇÑ À¯¿ëÇÑ °¡¸í(¸í·É)µµ ´õÇÏ¶ó
+# lsì˜ ìƒ‰ ì§€ì›ì„ ê°€ëŠ¥í•˜ê²Œ í•˜ê³ , ë˜í•œ ìœ ìš©í•œ ê°€ëª…(ëª…ë ¹)ë„ ë”í•˜ë¼
 
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
@@ -124,29 +124,30 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 # colored GCC warnings and errors
-// »öÀÌ ÀÖ´Â GCC °æ°í ±×¸®°í ¿¡·¯
+# ìƒ‰ì´ ìˆëŠ” GCC ê²½ê³  ê·¸ë¦¬ê³  ì—ëŸ¬
 
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
-// GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'¸¦ Ç¥ÇöÇÏ¶ó.
+# GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'ë¥¼ í‘œí˜„í•˜ë¼.
+
 # some more ls aliases
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
 # Add an "alert" alias for long running commands.  Use like so:
-// Àå±â ½ÇÇà ¸í·ÉÀ» À§ÇØ "ALERT" °¡¸í(¸í·É)À» Ãß°¡ÇÏ¶ó. ÀÌ·¸°Ô
+# ì¥ê¸° ì‹¤í–‰ ëª…ë ¹ì„ ìœ„í•´ "ALERT" ê°€ëª…(ëª…ë ¹)ì„ ì¶”ê°€í•˜ë¼. ì´ë ‡ê²Œ
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
 # Alias definitions.
-// °¡¸í(¸í·É) Á¤ÀÇ
+# ê°€ëª…(ëª…ë ¹) ì •ì˜
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
-// ´ç½ÅÀº ÀÌ °÷¿¡ Á÷Á¢ÀûÀ¸·Î Ã·°¡ÇÏ´Â ´ë½Å¿¡ ~/.bash_aliases °°ÀÌ ºĞ¸®µÈ ÆÄÀÏ¿¡
-// ³ÊÀÇ Ãß°¡»çÇ×À» ³Ö°í ½Í¾î ÇÒ Áöµµ ¸ğ¸¥´Ù.
+# ë‹¹ì‹ ì€ ì´ ê³³ì— ì§ì ‘ì ìœ¼ë¡œ ì²¨ê°€í•˜ëŠ” ëŒ€ì‹ ì— ~/.bash_aliases ê°™ì´ ë¶„ë¦¬ëœ íŒŒì¼ì—
+# ë„ˆì˜ ì¶”ê°€ì‚¬í•­ì„ ë„£ê³  ì‹¶ì–´ í•  ì§€ë„ ëª¨ë¥¸ë‹¤.
 
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
-// bash-doc ÆĞÅ°Áö ¾ÈÀÇ /usr/share/doc/bash-doc/examplesÀ» º¸¾Æ¶ó
+# bash-doc íŒ¨í‚¤ì§€ ì•ˆì˜ /usr/share/doc/bash-doc/examplesì„ ë³´ì•„ë¼
 
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
@@ -155,8 +156,8 @@ fi
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
-// ÇÁ·Î±×·¥ ¿Ï¼º ±â´ÉÀ» »ç¿ë(¸¸ÀÏ /etc/bash.bashrc and /etc/profile
-// sources /etc/bash.bashrcÀ» ÀÌ¹Ì »ç¿ëÇÒ ¼ö ÀÖ´Ù¸é)
+# í”„ë¡œê·¸ë¨ ì™„ì„± ê¸°ëŠ¥ì„ ì‚¬ìš©(ë§Œì¼ /etc/bash.bashrc and /etc/profile
+# sources /etc/bash.bashrcì„ ì´ë¯¸ ì‚¬ìš©í•  ìˆ˜ ìˆë‹¤ë©´)
 
 if ! shopt -oq posix; then
   if [ -f /usr/share/bash-completion/bash_completion ]; then
@@ -165,5 +166,6 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-//ÇÁ·ÒÇÁÆ® ¼öÁ¤ : »ç¿ëÀÚ ÀÌ¸§°ú ÇöÀç µğ·ºÅä¸®¸¦ ³ªÅ¸³½´Ù.
+
+#í”„ë¡¬í”„íŠ¸ ìˆ˜ì • : ì‚¬ìš©ì ì´ë¦„ê³¼ í˜„ì¬ ë””ë ‰í† ë¦¬ë¥¼ ë‚˜íƒ€ë‚¸ë‹¤.
 PS1="[\U@ \W]\\$"
