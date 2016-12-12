@@ -1,10 +1,11 @@
-Lab-9 : Synchronization
-1. 아래와 같은 mproc3 프로그램을 작성한다. 
-- 학번과 이름을 화면에 출력한다. 
-- 10개의 subproc을 process 또는 thread로 실행시킨다. 
-- 화면에 출력되는 각 함수 호출 카운트 값이 20이 되면 해당 쓰레드를 종료시킨다. 
-- 각 프로세스 또는 쓰레드에서 출력하는 함수 호출 카운트 값이 monotonically increased
-하도록 프로세스들을 semaphore나 mutex를 사용하여 동기화시킨다. 예를 들면, 현재
-출력된 카운트 값이 ‘3’ 이라면 다음에 출력되는 카운트 값은 반드시 ‘3’이상이 되어야
-한다. 즉, 10개의 프로세스 또는 쓰레드가 호출되는 횟수는 항상 동일해야 한다. 
-- 10개의 쓰레드가 모두 종료되면 “Finished Successfully”를 출력한다. 
+Lab-10 : IPC-pipe
+
+####아래와 같은 ipc_producer, ipc_consumer 프로그램을 작성한다. 
+- ipc_producer 프로그램은 ‘start’라는 키입력을 받으면 자신의 학번과 PID를
+ipc_consumer에 보낸다. 
+- ipc_consumer 프로그램은 학번을 받으면 화면에 학번과 ipc_producer의 PID를 화면에
+출력하고, 자신의 이름과 자신의 PID를 ipc_producer에 보낸다. 
+- 자신의 이름과 ipc_consumer의 PID를 받은 ipc_producer는 화면에 자신의 PID와
+  ipc_consumer의 PID, 이름과 학번을 화면에 출력한다. 
+  
+####ipc_producer와 ipc_consumer의 IPC 방법을 pipe를 사용하여 구현한다. 
